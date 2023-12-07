@@ -40,6 +40,7 @@ public struct User: Codable {
     public let worldId: String?
     public let instanceId: String?
     public let location: String?
+    public let profilePicOverride: String?
     public let travelingToWorld: String?
     public let travelingToInstance: String?
     public let travelingToLocation: String?
@@ -47,7 +48,6 @@ public struct User: Codable {
     public let onlineFriends: [String]?
     public let activeFriends: [String]?
     public let offlineFriends: [String]?
-    public let profilePicOverride: [String]?
 }
 
 let userUrl = "\(baseUrl)/users"
