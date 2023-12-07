@@ -47,7 +47,7 @@ public struct User: Codable {
     public let onlineFriends: [String]?
     public let activeFriends: [String]?
     public let offlineFriends: [String]?
-    public let profilePicOverride [String]?
+    public let profilePicOverride: [String]?
 }
 
 let userUrl = "\(baseUrl)/users"
