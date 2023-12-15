@@ -99,6 +99,21 @@ public struct UserAPIAsync {
         
         return user
     }
+    
+    public static func getUser(client: APIClientAsync, userID: String) async -> User? {
+        let url = URL(string: "\(userUrl)/\(userID)")!
+        
+        let (data, _) = await client.VRChatRequest(url: url,
+                                   httpMethod: "GET",
+                                   auth: true,
+                                   apiKey: true)
+        
+        guard let data = data else { return nil }
+        
+        let user:User? = decode(data: data)
+        
+        return user
+    }
 }
 
 public struct UserAPI {
